@@ -30,7 +30,7 @@ public class EditProfileTest {
         driver.findElement(By.xpath("//input[@id='outlined-adornment-password']")).click();
         driver.findElement(By.xpath("//input[@id='outlined-adornment-password']")).sendKeys("Dsde@4d1.ds");
         driver.findElement(By.xpath("//span[contains(text(), 'Submit')]")).click();
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         driver.findElement(By.xpath("//img[@name='user-avatar']")).click();
         Thread.sleep(1000);
         driver.findElement(By.xpath("//body/div/div/ul/li[1]")).click();

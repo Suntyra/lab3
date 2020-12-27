@@ -34,7 +34,7 @@ public class ShowAndAddCommentsTest {
         driver.findElement(By.xpath("//input[@id='outlined-adornment-password']")).click();
         driver.findElement(By.xpath("//input[@id='outlined-adornment-password']")).sendKeys("Dsde@4d1.ds");
         driver.findElement(By.xpath("//span[contains(text(), 'Submit')]")).click();
-        Thread.sleep(5000);
+        Thread.sleep(7000);
         driver.findElement(By.xpath("//span[contains(text(), 'Answer')]")).click();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//span[contains(text(), 'Close')]")).click();
@@ -59,7 +59,7 @@ public class ShowAndAddCommentsTest {
         driver.findElement(By.xpath("//input[@id='outlined-adornment-password']")).click();
         driver.findElement(By.xpath("//input[@id='outlined-adornment-password']")).sendKeys("Dsde@4d1.ds");
         driver.findElement(By.xpath("//span[contains(text(), 'Submit')]")).click();
-        Thread.sleep(5000);
+        Thread.sleep(7000);
         driver.findElement(By.xpath("//span[contains(text(), 'Answer')]")).click();
         Thread.sleep(3000);
         driver.findElement(By.xpath("//span[contains(text(), 'Close')]")).click();

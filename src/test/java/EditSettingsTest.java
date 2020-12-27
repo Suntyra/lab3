@@ -30,7 +30,7 @@ public class EditSettingsTest {
         driver.findElement(By.xpath("//input[@id='outlined-adornment-password']")).click();
         driver.findElement(By.xpath("//input[@id='outlined-adornment-password']")).sendKeys("Dsde@4d1.ds");
         driver.findElement(By.xpath("//span[contains(text(), 'Submit')]")).click();
-        Thread.sleep(5000);
+        Thread.sleep(8000);
         driver.findElement(By.xpath("//img[@name='user-avatar']")).click();
         driver.findElement(By.xpath("//a[contains(text(), 'Settings')]")).click();
         driver.findElement(By.xpath("//h6[contains(text(), 'Subscribe to the weekly Answers Email')]")).click();
