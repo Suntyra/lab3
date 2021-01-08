@@ -1,3 +1,4 @@
+import helpers.WebdriverSettings;
 import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
@@ -15,10 +16,7 @@ public class ShowAndAddCommentsTest {
 
     @Before
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "/home/suntyra/chromedriver");
-        //System.setProperty("webdriver.gecko.driver", "/home/suntyra/geckodriver");
-        driver = new ChromeDriver();
-        //driver = new FirefoxDriver();
+        driver = WebdriverSettings.getDriver();
     }
 
     @Test

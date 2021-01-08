@@ -1,18 +1,20 @@
+import helpers.WebdriverSettings;
+import org.junit.Before;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
 import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class RegistrationTest {
+    private WebDriver driver;
+
+    @Before
+    public void setUp(){
+        driver = WebdriverSettings.getDriver();
+    }
+
     @Test
     public void testRegistration() throws InterruptedException {
-        // Optional. If not specified, WebDriver searches the PATH for chromedriver.
-        System.setProperty("webdriver.chrome.driver", "/home/suntyra/chromedriver");
-        //System.setProperty("webdriver.gecko.driver", "/home/suntyra/geckodriver");
-
-        WebDriver driver = new ChromeDriver();
-        //WebDriver driver = new FirefoxDriver();
-
         driver.get("https://www.answers.com/");
         driver.manage().window().setSize(new Dimension(1200, 1200));
         driver.findElement(By.xpath("//span[contains(text(), 'Log in')]")).click();
