@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class WebdriverSettings {
 
     public static WebDriver getDriver(){
-        String driveType = "CHROME";
+        String driveType = "FIREFOX";
         if (driveType.equals("CHROME")) {
             System.setProperty("webdriver.chrome.driver", "/home/suntyra/chromedriver");
             return new ChromeDriver();

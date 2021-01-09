@@ -7,6 +7,8 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.is;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class SwitchTabsTest {
     private WebDriver driver;
 
@@ -17,6 +19,8 @@ public class SwitchTabsTest {
 
     @Test
     public void testTrendingTabs() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.get("https://www.answers.com/");
         driver.manage().window().setSize(new Dimension(1200, 1200));
         driver.findElement(By.xpath("//span[contains(text(), 'best')]")).click();
@@ -30,6 +34,8 @@ public class SwitchTabsTest {
 
     @Test
     public void testNavigationTabs() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.get("https://www.answers.com/");
         driver.manage().window().setSize(new Dimension(1200, 1200));
         driver.findElement(By.xpath("//a[contains(text(), 'Science')]")).click();
